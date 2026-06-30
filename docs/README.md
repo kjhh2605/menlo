@@ -21,6 +21,7 @@
 | `reference/motion_navigation.md` | `set_velocity`, `set_head`, vision-only navigation |
 | `reference/llm_memory_verification.md` | VLM, LLM JSON decision, memory, verification |
 | `reference/implementation_recipes.md` | starter 함수 매핑, 구현 레시피, 피해야 할 패턴 |
+| `troubleshooting_runtime.md` | VSCode/Jupyter 실행 중 발견한 runtime 문제와 대응 기록 |
 
 ## 핵심 원칙
 

@@ -1,4 +1,5 @@
 .omx/
+.env
 .codex/*
 !.codex/agents/
 !.codex/agents/**

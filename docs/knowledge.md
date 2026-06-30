@@ -32,3 +32,7 @@ camera observation
 + LLM JSON decision
 + AgentMemory recovery
 ```
+
+## 실행 중 문제 해결
+
+- Runtime troubleshooting: `troubleshooting_runtime.md`
