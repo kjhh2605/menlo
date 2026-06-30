@@ -84,27 +84,27 @@ This file is generated for a live OMX team worker run and is disposable.
 
 ## Worker Identity
 - Team: use-the-deep-intervie-61ca1c2e
-- Worker: worker-1
+- Worker: worker-2
 - Role: executor
 - Leader cwd: /Users/gnar/Desktop/menlo
-- Worktree root: /Users/gnar/Desktop/menlo/.omx/team/use-the-deep-intervie-61ca1c2e/worktrees/worker-1
+- Worktree root: /Users/gnar/Desktop/menlo/.omx/team/use-the-deep-intervie-61ca1c2e/worktrees/worker-2
 - Team state root: /Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state
-- Inbox path: /Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/workers/worker-1/inbox.md
-- Mailbox path: /Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/mailbox/worker-1.json
+- Inbox path: /Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/workers/worker-2/inbox.md
+- Mailbox path: /Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/mailbox/worker-2.json
 - Leader mailbox path: /Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/mailbox/leader-fixed.json
 - Task directory: /Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/tasks
-- Worker status path: /Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/workers/worker-1/status.json
-- Worker identity path: /Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/workers/worker-1/identity.json
+- Worker status path: /Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/workers/worker-2/status.json
+- Worker identity path: /Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/workers/worker-2/identity.json
 
 ## Protocol
-1. Read your inbox at `/Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/workers/worker-1/inbox.md`.
+1. Read your inbox at `/Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/workers/worker-2/inbox.md`.
 2. Load the worker skill from the first existing path:
    - `${CODEX_HOME:-~/.codex}/skills/worker/SKILL.md`
    - `/Users/gnar/Desktop/menlo/.codex/skills/worker/SKILL.md`
    - `/Users/gnar/Desktop/menlo/skills/worker/SKILL.md`
 3. Send startup ACK before task work:
 
-   `omx team api send-message --input "{"team_name":"use-the-deep-intervie-61ca1c2e","from_worker":"worker-1","to_worker":"leader-fixed","body":"ACK: worker-1 initialized"}" --json`
+   `omx team api send-message --input "{"team_name":"use-the-deep-intervie-61ca1c2e","from_worker":"worker-2","to_worker":"leader-fixed","body":"ACK: worker-2 initialized"}" --json`
 
 4. Resolve canonical team state root in this order: `OMX_TEAM_STATE_ROOT` env -> worker identity `team_state_root` -> config/manifest `team_state_root` -> local cwd fallback.
 5. Read task files from `/Users/gnar/.omx-runs/run-20260630025319-39f9/.omx/state/team/use-the-deep-intervie-61ca1c2e/tasks/task-<id>.json` using bare `task_id` values in APIs.
@@ -113,13 +113,13 @@ This file is generated for a live OMX team worker run and is disposable.
    - `omx team api transition-task-status --json`
    - `omx team api release-task-claim --json` only for rollback to pending
 7. Use mailbox delivery flow:
-   - `omx team api mailbox-list --input "{"team_name":"use-the-deep-intervie-61ca1c2e","worker":"worker-1"}" --json`
-   - `omx team api mailbox-mark-delivered --input "{"team_name":"use-the-deep-intervie-61ca1c2e","worker":"worker-1","message_id":"<MESSAGE_ID>"}" --json`
+   - `omx team api mailbox-list --input "{"team_name":"use-the-deep-intervie-61ca1c2e","worker":"worker-2"}" --json`
+   - `omx team api mailbox-mark-delivered --input "{"team_name":"use-the-deep-intervie-61ca1c2e","worker":"worker-2","message_id":"<MESSAGE_ID>"}" --json`
 8. Preserve leader steering via inbox/mailbox nudges; task payload stays in inbox/task JSON, not this file.
 9. Do not pass `workingDirectory` to legacy team_* MCP tools; use `omx team api` CLI interop.
 
 ## Message Protocol
-- Always include `from_worker: "worker-1"`
+- Always include `from_worker: "worker-2"`
 - Send leader messages to `to_worker: "leader-fixed"`
 
 ## Team Coordination Gate
